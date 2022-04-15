@@ -1,43 +1,29 @@
-// <⚠️ DONT DELETE THIS ⚠️>
-// import "./styles.css";
-const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
-// <⚠️ /DONT DELETE THIS ⚠️>
+const body = document.querySelector("body");
+const handleWindowSize = () => {
+  const winWidth = window.innerWidth;
 
-/*
-mouseOnTop
-✅ The text of the title should change when the mouse is on top of it.
-mouseLeaves
-✅ The text of the title should change when the mouse is leaves it.
-windowResize
-✅ When the window is resized the title should change.
-mouseRightClick
-✅ On right click the title should also change.
-✅ The colors of the title should come from a color from the colors array.
-✅ DO NOT CHANGE .css, or .html files.
-✅ ALL function handlers should be INSIDE of "superEventHandler"
-*/
-const h2 = document.querySelector("h2");
-
-const superEventHandler = {
-  mouseOnTop() {
-    h2.innerText = "The mouse is here!";
-    h2.style.color = colors[0];
-  },
-  mouseLeaves() {
-    h2.innerText = "The mouse is gone!";
-    h2.style.color = colors[1];
-  },
-  windowResize() {
-    h2.innerText = "You just resized!";
-    h2.style.color = colors[2];
-  },
-  mouseRightClick() {
-    h2.innerText = "That was mouse right click!";
-    h2.style.color = colors[3];
-  },
+  console.log(winWidth);
+  if (winWidth < 600) {
+    // body.style.backgroundColor = colors[1];
+    body.className = "";
+    body.classList.add("changeColor0");
+  } else if (winWidth > 600 && winWidth < 700) {
+    // body.style.backgroundColor = colors[1];
+    body.className = "";
+    body.classList.add("changeColor1");
+  } else if (winWidth > 700 && winWidth < 800) {
+    // body.style.backgroundColor = colors[2];
+    body.className = "";
+    body.classList.add("changeColor2");
+  } else if (winWidth > 800 && winWidth < 900) {
+    // body.style.backgroundColor = colors[3];
+    body.className = "";
+    body.classList.add("changeColor3");
+  } else {
+    // body.style.backgroundColor = colors[4];
+    body.className = "";
+    body.classList.add("changeColor4");
+  }
 };
 
-h2.addEventListener("mouseenter", superEventHandler.mouseOnTop);
-h2.addEventListener("mouseleave", superEventHandler.mouseLeaves);
-window.addEventListener("resize", superEventHandler.windowResize);
-window.addEventListener("contextmenu", superEventHandler.mouseRightClick);
+window.addEventListener("resize", handleWindowSize);

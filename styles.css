@@ -1,4 +1,19 @@
+.changeColor0 {
+  background-color: #1abc9c;
+}
+.changeColor1 {
+  background-color: #3498db;
+}
+.changeColor2 {
+  background-color: #9b59b6;
+}
+.changeColor3 {
+  background-color: #f39c12;
+}
+.changeColor4 {
+  background-color: #e74c3c;
+}
 body {
-  font-family: sans-serif;
-  background-color: bisque;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
