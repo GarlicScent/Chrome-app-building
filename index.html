@@ -9,7 +9,19 @@
     <title>VanillaJS</title> 
 </head>
 <body>
-    <h2>Hello</h2>
+    <h1>Random Number Game</h1>
+    <form id="gameForm">
+        <h3>Generate a number between 0 and 
+            <input id="gameMaxNumber" type="number">
+        </h3>    
+        Guess the number 
+        <input required id="userNumber" type="number"> 
+        <button type="submit">Play!</button>
+    </form>
+    <br>
+    <span id="gameStatus"></span>
+    <br>
+    <span style="font-weight: 800;" id="gameResult"></span>
     <script src="app.js"></script>
 </body>
 </html>

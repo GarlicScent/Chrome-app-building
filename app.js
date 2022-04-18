@@ -1,29 +1,36 @@
-const body = document.querySelector("body");
-const handleWindowSize = () => {
-  const winWidth = window.innerWidth;
+const gameForm = document.getElementById("gameForm");
+const gameMaxNumber = document.getElementById("gameMaxNumber");
+const userNumber = document.getElementById("userNumber");
+const gameStatus = document.getElementById("gameStatus");
+const gameResult = document.getElementById("gameResult");
 
-  console.log(winWidth);
-  if (winWidth < 600) {
-    // body.style.backgroundColor = colors[1];
-    body.className = "";
-    body.classList.add("changeColor0");
-  } else if (winWidth > 600 && winWidth < 700) {
-    // body.style.backgroundColor = colors[1];
-    body.className = "";
-    body.classList.add("changeColor1");
-  } else if (winWidth > 700 && winWidth < 800) {
-    // body.style.backgroundColor = colors[2];
-    body.className = "";
-    body.classList.add("changeColor2");
-  } else if (winWidth > 800 && winWidth < 900) {
-    // body.style.backgroundColor = colors[3];
-    body.className = "";
-    body.classList.add("changeColor3");
+const handleGameSubmit = (event) => {
+  event.preventDefault();
+
+  const gameMaxNo = parseInt(gameMaxNumber.value);
+  const userNo = parseInt(userNumber.value);
+  const machineNo = Math.floor(Math.random() * gameMaxNo);
+
+  randomNumberGame(gameMaxNo, userNo, machineNo);
+
+  if (gameMaxNo < 0) {
+    gameStatus.textContent = `You need to put positive Number on first input`;
+    gameResult.textContent = "Do it again";
+  } else if (userNo > gameMaxNo) {
+    gameStatus.textContent = `You need to put less than ${gameMaxNo}`;
+    gameResult.textContent = "Do it again";
   } else {
-    // body.style.backgroundColor = colors[4];
-    body.className = "";
-    body.classList.add("changeColor4");
   }
 };
 
-window.addEventListener("resize", handleWindowSize);
+function randomNumberGame(gameMaxNo, userNo, machineNo) {
+  if (userNo !== machineNo) {
+    gameStatus.textContent = `You chose: ${userNo}, the machine chose: ${machineNo}`;
+    gameResult.textContent = "You Lost!";
+  } else {
+    gameStatus.textContent = `You chose: ${userNo}, the machine chose: ${machineNo}`;
+    gameResult.textContent = "You Win!";
+  }
+}
+
+gameForm.addEventListener("submit", handleGameSubmit);
