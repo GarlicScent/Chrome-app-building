@@ -5,21 +5,17 @@ const gameStatus = document.getElementById("gameStatus");
 const gameResult = document.getElementById("gameResult");
 
 const handleGameSubmit = (event) => {
-  event.preventDefault();
-
   const gameMaxNo = parseInt(gameMaxNumber.value);
   const userNo = parseInt(userNumber.value);
   const machineNo = Math.floor(Math.random() * gameMaxNo);
 
-  randomNumberGame(gameMaxNo, userNo, machineNo);
-
-  if (gameMaxNo < 0) {
-    gameStatus.textContent = `You need to put positive Number on first input`;
-    gameResult.textContent = "Do it again";
+  if (gameMaxNo <= 0 || userNo < 0) {
+    alert(`You need to put positive Number on first input`);
   } else if (userNo > gameMaxNo) {
-    gameStatus.textContent = `You need to put less than ${gameMaxNo}`;
-    gameResult.textContent = "Do it again";
+    alert(`You need to put less than ${gameMaxNo}`);
   } else {
+    event.preventDefault();
+    randomNumberGame(gameMaxNo, userNo, machineNo);
   }
 };
 
@@ -30,6 +26,7 @@ function randomNumberGame(gameMaxNo, userNo, machineNo) {
   } else {
     gameStatus.textContent = `You chose: ${userNo}, the machine chose: ${machineNo}`;
     gameResult.textContent = "You Win!";
+    console.log("good job");
   }
 }
 

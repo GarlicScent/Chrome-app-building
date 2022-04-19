@@ -10,14 +10,15 @@
 </head>
 <body>
     <h1>Random Number Game</h1>
+    <h3>Generate a number between 0 and 
+        <input required id="gameMaxNumber" type="number" min="1", max="" >
+    </h3>   
     <form id="gameForm">
-        <h3>Generate a number between 0 and 
-            <input id="gameMaxNumber" type="number">
-        </h3>    
         Guess the number 
-        <input required id="userNumber" type="number"> 
+        <input required id="userNumber" type="number" min="0", max=""> 
         <button type="submit">Play!</button>
     </form>
+    
     <br>
     <span id="gameStatus"></span>
     <br>
