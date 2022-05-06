@@ -9,6 +9,17 @@ function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
+function toDoChecked(event) {
+  // console.dir(event);
+  const span = event.target.parentElement.children[1];
+
+  if (event.target.checked) {
+    span.classList.add("toDoChecked");
+  } else {
+    span.classList.remove("toDoChecked");
+  }
+}
+
 function deleteTodo(event) {
   const li = event.target.parentElement;
   li.remove();
@@ -19,14 +30,18 @@ function deleteTodo(event) {
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
+  const checkBox = document.createElement("input");
+  checkBox.type = "checkbox";
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const btn = document.createElement("button");
   btn.innerText = "❌";
+  li.appendChild(checkBox);
   li.appendChild(span);
   li.appendChild(btn);
   toDoList.appendChild(li);
 
+  checkBox.addEventListener("click", toDoChecked);
   btn.addEventListener("click", deleteTodo);
 }
 

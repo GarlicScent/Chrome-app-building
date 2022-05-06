@@ -10,8 +10,7 @@ function paintLoginUser(username) {
   loginForm.classList.add(HIDDEN_CLASSNAME);
   messageBox.classList.remove(HIDDEN_CLASSNAME);
   messageBox.classList.add("msgFlexBox");
-  loginMessageH2.innerHTML = `Hello ${username}. Welcome!!`;
-  // 왜 h2가 공란일때는 안되는 걸까??
+  loginMessageH2.innerText = `Hello ${username}. Welcome~~`;
 }
 
 function handleLoginSubmit(event) {

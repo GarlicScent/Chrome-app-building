@@ -6,14 +6,36 @@ body {
   align-items: center;
   flex-direction: column;
 }
+i {
+  size: 500px;
+  color: rgba(204, 255, 235, 0.6);
+  position: fixed;
+  right: 70px;
+  top: 50px;
+}
+#js-weather {
+  position: absolute;
+  right: 70px;
+  top: 80px;
+}
+#js-weather span {
+  font-family: "Water Brush", cursive;
+  color: rgba(204, 255, 235, 0.6);
+  font-size: 22px;
+  opacity: 0.6;
+}
 
 .hidden {
   display: none;
 }
 .bg {
-  height: 100vh;
-  background-size: cover;
+  position: fixed;
+  min-height: 100%;
+  min-width: 1024px;
+  background-size: contain;
+  background-repeat: no-repeat;
   opacity: 0.8;
+  z-index: -1;
 }
 .msgFlexBox {
   display: flex;
@@ -25,4 +47,48 @@ div > button {
   border-radius: 10px;
   border: solid 2px plum;
   background: linear-gradient(0.3turn, plum, rgb(144, 226, 142));
+}
+input {
+  border: solid 2.5px rgb(240, 147, 221);
+  border-radius: 15px;
+  width: 150px;
+  height: 20px;
+  outline: unset;
+}
+form {
+  margin-bottom: 5px;
+}
+/* todo list */
+li {
+  display: flex;
+  justify-content: start;
+  margin-top: 5px;
+}
+.toDoChecked {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  margin-right: 7px;
+  border-radius: 50%;
+  border: 1px solid #546aeb;
+  appearance: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+input[type="checkbox"]:checked {
+  background: #54eb8e;
+  border: none;
+}
+button {
+  border: none;
+  background: none;
+  transition: all 0.5s ease-in-out;
+}
+button:hover {
+  transform: rotate(90deg);
 }

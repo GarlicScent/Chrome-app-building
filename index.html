@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Water+Brush&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="https://nomadcoders.co/m.svg">
     <title>VanillaJS</title> 
 </head>
@@ -12,10 +13,10 @@
     <h1 class="js-clock"></h1>
     <!-- login box -->
     <form action="" id="js-login-input" >
-        <input type="text" required placeholder="Write user name">
+        <input type="text" required placeholder="Write user name" >
     </form>
     <div class="hidden" id="js-loginMessage">
-        <h2>.</h2>
+        <h2></h2>
         <button>New username</button>
     </div>
     
@@ -24,12 +25,17 @@
         <input type="text" required placeholder="Write todos">
     </form>
     <ul id="js-toDoList"></ul>
+
     <!-- weather box -->
+    <i class="fa-2xl fa fa-umbrella" aria-hidden="true" ></i>
+    
     <div id="js-weather">
         <span></span>
         <br>
         <span></span>
     </div>
+
+    
 
     <script src="./js/login.js"></script>
     <script src="./js/bgImgs.js"></script> 
@@ -38,5 +44,6 @@
     <script src="./js/clock.js"></script>
     <!-- <script src="./js/christmasDday.js"></script> -->
     <!-- <script src="./js/bgColors.js"></script> -->
+    <script src="https://kit.fontawesome.com/b570f12f3a.js" crossorigin="anonymous"></script>
 </body>
 </html>
