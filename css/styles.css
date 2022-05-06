@@ -84,11 +84,11 @@ input[type="checkbox"]:checked {
   background: #54eb8e;
   border: none;
 }
-button {
+li > button {
   border: none;
   background: none;
   transition: all 0.5s ease-in-out;
 }
-button:hover {
+li > button:hover {
   transform: rotate(90deg);
 }
