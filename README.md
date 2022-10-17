@@ -17,4 +17,4 @@
 3. 랜덤으로 저장된 배경 이미지 출력
 4. openWeather api를 사용하여 날씨와 위치 (geolocation)
 
-🔗 Links: <a href="https://garlicscent.github.io/chrome-app-building/" /> Chrome app building
+#### 🔗 Links: <a href="https://garlicscent.github.io/chrome-app-building/" /> Chrome app building
