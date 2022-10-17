@@ -7,6 +7,9 @@
 <img src="https://user-images.githubusercontent.com/26360179/196092819-9942faac-8ea0-436c-8ab3-7819b6d283aa.gif" width=600 height=400 />
 
 ---
+
+### 👣개발 내용
+
 1. setInveral 함수를 사용하여 실시간 시계구현
 2. 로컬 스토리지 사용
     1. 로그인
