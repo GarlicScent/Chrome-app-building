@@ -1,8 +1,7 @@
 # Chrome app building
 
-Chrome app building
-
-### VanillaJS challenges from nomadcoders.co. (2 week_4/11~25)
+### 크롬 앱 제작
+상세 소개: __VanillaJS challenges from nomadcoders.co. (2 week_4/11~25)
 
 ![깃헙올리기용](https://user-images.githubusercontent.com/26360179/196092819-9942faac-8ea0-436c-8ab3-7819b6d283aa.gif)
 
