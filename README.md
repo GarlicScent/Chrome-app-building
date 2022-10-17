@@ -6,9 +6,9 @@
 ![깃헙올리기용](https://user-images.githubusercontent.com/26360179/196092819-9942faac-8ea0-436c-8ab3-7819b6d283aa.gif)
 
 ---
-1. 실시간 시계 
-2. 로컬 스토리지를 사용한 로그인 
-3. 로컬 스토리지를 사용한 투두리스트 
-4. 랜덤 배경 이미지 
-5. 날씨와 위치 (geolocation) 
-6. CSS 꾸미기.
+1. setInveral 함수를 사용하여 실시간 시계구현
+2. 로컬 스토리지 사용
+    1. 로그인
+    2. Todo List
+3. 랜덤으로 저장된 배경 이미지 출력
+4. openWeather api를 사용하여 날씨와 위치 (geolocation)
